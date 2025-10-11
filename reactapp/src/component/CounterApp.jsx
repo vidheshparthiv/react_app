@@ -10,7 +10,7 @@ function CounterApp() {
         setCount(count + 1);
     }
     function res(){
-        setCount(count = 0);
+        setCount(count +1);
     console.log(count)}
     return (
     <div>
