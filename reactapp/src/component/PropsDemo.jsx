@@ -18,7 +18,7 @@ function PropsDemo(){//when using class we dontt need to use props
             <button onClick={()=>setIslogin(!islogin)}>
                 {islogin?'hide message':'show message'}
             </button>
-            { x==lucky ?
+            
         </div>
     )
 }

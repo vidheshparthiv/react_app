@@ -10,12 +10,7 @@ import { HelloWorld } from "./component/HelloWorld";
 
 // export default class App extends Component {
 
-//   state={
-//       show:true
-//     }
-//   toggle=()=>{
-//       this.setState((prev)=>({show:!prev.show}))
-//   }
+
 //   render() { 
 //   return (
 //     <div>
