@@ -43,6 +43,8 @@ import react,{component} from 'react';
 import PropsDemo from "./component/PropsDemo";
 import Hero from "./component/Hero";
 import ErrorBoundary from './component/ErrorBoundary';
+import ClickCounter from './component/ClickCounter';
+import ClickCounterHoC from './component/ClickCounterHoC';
 function App(){
   // let a=10;
   // let rn=Math.floor(Math.random()*10);
@@ -60,14 +62,16 @@ function App(){
       rn===a ?<h1>pathu un vaiila kuthu</h1>:<h1>go home </h1>
     }
      */}
-     <h1>Heros</h1>
+     {/* <h1>Heros</h1>
      <ErrorBoundary>
       <Hero heroName="Thanos" />
      </ErrorBoundary>
      <ErrorBoundary>
       <Hero heroName="Ironman" />
      </ErrorBoundary>
-     
+      */}
+      <ClickCounter/>
+      <ClickCounterHoC/>
     </div>
     
   )
