@@ -11,6 +11,6 @@ import UseEffectMethod from './component/UseEffectMethod.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <UseEffectMethod/>
+  <App/>
   </StrictMode>
 )

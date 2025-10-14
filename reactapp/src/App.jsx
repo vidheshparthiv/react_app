@@ -1,7 +1,7 @@
 // rafce
 // import PropsDemo from "./component/PropsDemo";
-import CounterApp from "./component/CounterApp";
-import { HelloWorld } from "./component/HelloWorld";
+// import CounterApp from "./component/CounterApp";
+// import { HelloWorld } from "./component/HelloWorld";
 // import HelloWorld01 from "./component/HelloWorld01";
 // import CounterApp from "./component/CounterApp";
 // import React,{Component} from "react";
@@ -41,12 +41,14 @@ import { HelloWorld } from "./component/HelloWorld";
 
 import react,{component} from 'react';
 import PropsDemo from "./component/PropsDemo";
+import Hero from "./component/Hero";
+import ErrorBoundary from './component/ErrorBoundary';
 function App(){
   // let a=10;
   // let rn=Math.floor(Math.random()*10);
   // let b="hello world";
   // let arr=[1,2,3,4,5]
-  return(<div style={{ backgroundColor: 'lightblue'}}>
+  return(<div style={{ backgroundColor: 'violet'}}>
     {/* <h1>{a}</h1>
     <h2>{JSON.stringify(b)}</h2>
     
@@ -58,7 +60,14 @@ function App(){
       rn===a ?<h1>pathu un vaiila kuthu</h1>:<h1>go home </h1>
     }
      */}
-     <PropsDemo/>
+     <h1>Heros</h1>
+     <ErrorBoundary>
+      <Hero heroName="Thanos" />
+     </ErrorBoundary>
+     <ErrorBoundary>
+      <Hero heroName="Ironman" />
+     </ErrorBoundary>
+     
     </div>
     
   )
