@@ -1,10 +1,7 @@
 import React,{useState} from 'react'
+import CliWithCounter from './CliWithCounter'
 
-const ClickCounterHoC = () => {
-    const [count,setCount]=useState(0)
-    function increase(){
-        setCount(count+1)
-    }
+const ClickCounterHoC = ({count,increase}) => {
   return (
     <div>
         <button onMouseOver={increase}>{count}</button>
@@ -12,4 +9,4 @@ const ClickCounterHoC = () => {
   )
 }
 
-export default ClickCounterHoC
+export default CliWithCounter(ClickCounterHoC)

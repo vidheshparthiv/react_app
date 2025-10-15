@@ -1,10 +1,5 @@
 // rafce
-// import PropsDemo from "./component/PropsDemo";
-// import CounterApp from "./component/CounterApp";
-// import { HelloWorld } from "./component/HelloWorld";
-// import HelloWorld01 from "./component/HelloWorld01";
-// import CounterApp from "./component/CounterApp";
-// import React,{Component} from "react";
+
 
 // import LifeCycle from "./component/LifeCycle";
 
@@ -39,12 +34,21 @@
 //   );
 // }}
 
-import react,{component} from 'react';
-import PropsDemo from "./component/PropsDemo";
-import Hero from "./component/Hero";
-import ErrorBoundary from './component/ErrorBoundary';
-import ClickCounter from './component/ClickCounter';
-import ClickCounterHoC from './component/ClickCounterHoC';
+// import react,{component} from 'react';
+// import PropsDemo from "./component/PropsDemo";
+// import Hero from "./component/Hero";
+// import ErrorBoundary from './component/ErrorBoundary';
+// import ClickCounter from './component/ClickCounter';
+// import ClickCounterHoC from './component/ClickCounterHoC';
+// import CounterApp from "./component/CounterApp";
+// import { HelloWorld } from "./component/HelloWorld";
+// import HelloWorld01 from "./component/HelloWorld01";
+// import React,{Component} from "react";
+// import Principal from './contextapi/Principal';
+// import Student from './contextapi/Student';
+import { UserProvider } from './context/UserContext.jsx';
+import Login from './LoginWithContext/Login';
+import Profile from './LoginWithContext/Profile';
 function App(){
   // let a=10;
   // let rn=Math.floor(Math.random()*10);
@@ -70,8 +74,13 @@ function App(){
       <Hero heroName="Ironman" />
      </ErrorBoundary>
       */}
-      <ClickCounter/>
-      <ClickCounterHoC/>
+      {/* <ClickCounter/>
+      <ClickCounterHoC/> */}
+      {/* <Principal message={"friday is holiday!!"}/> */}
+      <UserProvider>
+        <Login/>
+        <Profile/>
+      </UserProvider>
     </div>
     
   )

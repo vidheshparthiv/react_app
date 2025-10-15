@@ -1,10 +1,7 @@
 import React,{useState} from 'react'
+import CliWithCounter from './CliWithCounter';
 
-const ClickCounter = () => {
-    const [count,setCount]=useState(0)
-    function increase(){
-        setCount(count+1)
-    }
+const ClickCounter = ({count,increase}) => {//from higher order component via props  
   return (
     <div>
         <h1>ClickCounter</h1>
@@ -14,4 +11,4 @@ const ClickCounter = () => {
   )
 }
 
-export default ClickCounter;
+export default CliWithCounter(ClickCounter);
