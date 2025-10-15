@@ -1,0 +1,7 @@
+prop drilling with out using usecontext hook with manual props
+
+steps in context Apis
+=>//step 1 create context Api or create context using hook
+=>//step 2 use createContext hook
+=>//step 3 create contextprovider
+=>//step 4 if you want to usecontext will help you to use the context
