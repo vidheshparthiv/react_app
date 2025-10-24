@@ -1,5 +1,8 @@
 // rafce
 
+import { Provider } from "react-redux";
+import ReduxCounterApp from "./component/ReduxCounterApp";
+
 
 // import LifeCycle from "./component/LifeCycle";
 
@@ -46,42 +49,48 @@
 // import React,{Component} from "react";
 // import Principal from './contextapi/Principal';
 // import Student from './contextapi/Student';
-import { UserProvider } from './context/UserContext.jsx';
-import Login from './LoginWithContext/Login';
-import Profile from './LoginWithContext/Profile';
+// import { UserProvider } from './context/UserContext.jsx';
+// import Login from './LoginWithContext/Login';
+// import Profile from './LoginWithContext/Profile';
 function App(){
   // let a=10;
   // let rn=Math.floor(Math.random()*10);
   // let b="hello world";
   // let arr=[1,2,3,4,5]
-  return(<div style={{ backgroundColor: 'violet'}}>
-    {/* <h1>{a}</h1>
-    <h2>{JSON.stringify(b)}</h2>
+  return(
+    <Provider store={store}>
+      <div style={{ backgroundColor: 'violet'}}>
+      <ReduxCounterApp/>
+      </div>
+      </Provider>
+    // {/* <h1>{a}</h1>
+    // <h2>{JSON.stringify(b)}</h2>
     
-    {arr.map((value,index)=>(
-      <h3 >{value}</h3>
-    ))}
-    <h2>{rn}</h2>
-    {
-      rn===a ?<h1>pathu un vaiila kuthu</h1>:<h1>go home </h1>
-    }
-     */}
-     {/* <h1>Heros</h1>
-     <ErrorBoundary>
-      <Hero heroName="Thanos" />
-     </ErrorBoundary>
-     <ErrorBoundary>
-      <Hero heroName="Ironman" />
-     </ErrorBoundary>
-      */}
-      {/* <ClickCounter/>
-      <ClickCounterHoC/> */}
-      {/* <Principal message={"friday is holiday!!"}/> */}
-      <UserProvider>
-        <Login/>
-        <Profile/>
-      </UserProvider>
-    </div>
+    // {arr.map((value,index)=>(
+    //   <h3 >{value}</h3>
+    // ))}
+    // <h2>{rn}</h2>
+    // {
+    //   rn===a ?<h1>pathu un vaiila kuthu</h1>:<h1>go home </h1>
+    // }
+    //  */}
+    //  {/* <h1>Heros</h1>
+    //  <ErrorBoundary>
+    //   <Hero heroName="Thanos" />
+    //  </ErrorBoundary>
+    //  <ErrorBoundary>
+    //   <Hero heroName="Ironman" />
+    //  </ErrorBoundary>
+    //   */}
+    //   {/* <ClickCounter/>
+    //   <ClickCounterHoC/> */}
+    //   {/* <Principal message={"friday is holiday!!"}/> */}
+    //   {/* <UserProvider>
+    //     <Login/>
+    //     <Profile/>
+    //   </UserProvider> */}
+
+
     
   )
 
