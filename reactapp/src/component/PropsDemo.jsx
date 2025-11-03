@@ -1,26 +1,17 @@
 import React, { useState } from 'react';
-function PropsDemo(){//when using class we dontt need to use props
-     const [islogin,setIslogin]=useState(false)
-     let msg;
-     if(!islogin){
-        msg="guest"
-     }
-     else {
-        msg="kdd"
-     }
-     //we can also do that dhoni thing with random()
-     let x= Math.floor(Math.random()*10);
-     let lucky=7;
-    return(
-        <div>
-            <h1>student message</h1>
-            {islogin && <h2>welcome to the portal {msg} </h2>}
-            <button onClick={()=>setIslogin(!islogin)}>
-                {islogin?'hide message':'show message'}
-            </button>
-            
+function PropsDemo({data}){//when using class we dontt need to use props
+  return(
+    <div>
+       {data.map((emp, index) => (
+        <div key={index}>
+          <h3>{emp.name}</h3>
+          <p>Role: {emp.role}</p>
+          <p>Salary: ₹{emp.salary}</p>
+          <hr />
         </div>
-    )
+      ))}
+    </div>
+  )
 }
 export default PropsDemo;    
 
