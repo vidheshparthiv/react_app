@@ -6,9 +6,7 @@ function FormData() {
   function handleSubmit(e) {
     e.preventDefault();
     alert("The name you entered was: " + nameRef.current.value);
-    
   }
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -24,5 +22,4 @@ function FormData() {
     </div>
   );
 }
-
 export default FormData;

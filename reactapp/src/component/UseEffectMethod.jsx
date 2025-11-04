@@ -1,23 +1,46 @@
-import React, { useEffect, useState } from 'react';
-function UseEffectMethod(){
-    //use rffect is similar to did mount in class life cycle
-    const [time,settime]=useState()
-    useEffect(()=>{
-        console.log("Component is created")
-    },[])//we can give dependency array anf useeffect runs every time that values changes []only one time
+import React, { useState, useEffect } from 'react';
 
-    return(
-        <div>
-            <h1>use Effect method</h1>
-            <h2>count:{time}</h2>
-            <button onClick={()=>{settime((prev)=>prev+1)}}>increase</button>
-            <button onClick={()=>settime(time-1)}>decrease</button>
-            <button onClick={()=>settime(0)}>reset</button>
-        </div>
-    )
-}
-export default UseEffectMethod;
+const TimerApp = () => {
+  // State for counting seconds
+  const [seconds, setSeconds] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
+
+  // useEffect runs whenever isRunning changes
+  useEffect(() => {
+    let timer;
+
+    if (isRunning) {
+      // Increment seconds every 1 second
+      timer = setInterval(() => {
+        setSeconds(prevSeconds => prevSeconds + 1);
+      }, 1000);
+    }
+
+    // Cleanup when stopped or unmounted
+    return () => clearInterval(timer);
+  }, [isRunning]);
+
+  // Functions to control the timer
+  const handleStart = () => setIsRunning(true);
+  const handleStop = () => setIsRunning(false);
+  const handleReset = () => {
+    setIsRunning(false);
+    setSeconds(0);
+  };
+
+  return (
+    <div style={styles.container}>
+      <h1>⏱️ Timer App</h1>
+      <h2>{seconds}s</h2>
+
+      <div style={styles.buttonContainer}>
+        <button onClick={handleStart} style={styles.button}>Start</button>
+        <button onClick={handleStop} style={styles.button}>Stop</button>
+        <button onClick={handleReset} style={styles.button}>Reset</button>
+      </div>
+    </div>
+  );
+};
 
 
-
-
+export default TimerApp;

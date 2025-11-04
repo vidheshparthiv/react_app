@@ -10,6 +10,5 @@ const CliWithCounter = (WrapperComponent) => {
     <WrapperComponent count={count} increase={increase}{...props}/>
   )
  }
-} 
-
+}
 export default CliWithCounter
