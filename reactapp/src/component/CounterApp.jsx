@@ -2,7 +2,7 @@ import React from 'react'
 
 function CounterApp() {
     let [count, setCount]= React.useState(0);//simple state in this useState it returns an array of 2 values one is the variable and other is the function to update the variable
-    //easy peassy orange squeezy
+    //easy orange squeezy
     function hcrease(){
         setCount(count + 1);
     }
